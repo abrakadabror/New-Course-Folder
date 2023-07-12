@@ -12,3 +12,4 @@ friends = friends + ('Kamil',) #ale mozna dodac do siebie dwie tuple
 print(friends)
 
 #w listach mozna usuwac i dodawac elementy w tupli nie.
+#tupla jest uzytwczna gdy chcesz zachowac vaules niezmienione 
