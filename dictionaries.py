@@ -18,8 +18,20 @@
 # print(friends[2]['name']) #pobieramy drugi element ze slownika  a pozniej name
 
 
-friends = [('Rolf', 24), ('Adam', 25), ('Anne', 29)] #lista tuples 
+# friends = [('Rolf', 24), ('Adam', 25), ('Anne', 29)] #lista tuples 
 
-friend_ages = dict(friends) #zamieniamy tuple na slownik
-print(friend_ages)
+# friend_ages = dict(friends) #zamieniamy tuple na slownik
+# print(friend_ages)
 
+players = [
+    {
+        'name': 'Rolf',
+        'numbers': (13, 22, 3, 6, 9)
+    },
+    {
+        'name': 'John',
+        'numbers': (22, 3, 5, 7, 9)
+    }
+]
+print(players[0]['numbers'])
+print(players[0]['numbers'][0])
