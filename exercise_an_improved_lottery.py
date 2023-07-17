@@ -15,15 +15,13 @@ players = [
 # The winnings are calculated with the formula:
 # 100 ** len(numbers_matched)
 
-# zaczynamy od stwierzenia, ze najelpszy gracz jest pierwszym
-top_player = players[0]
-for player in players:  # przechodzimy przez kazdego gracza
-    numbers_matched = len(player['numbers'].intersection(
-        lottery_numbers))  # przeliczyamy ile numerow pasuje
-    if numbers_matched > len(top_player['numbers'].intersection(lottery_numbers)):
-        # jesli pasuja do wiecej niz jednego obecnego najlepszego gracza
-        top_player = player  # powiedz, ze ten gracz jest nowym topowym graczem
+max_matched = 0 
+winner =''
 
-    # liczymy wygrane graczy
-    winnings = 100 ** len(top_player['numbers'].intersection(lottery_numbers))
-    print(f"{top_player['name']} won {winnings}.")
+for player in players: #iterujemy po player w zbiorze players 
+    numbers_matched = len(player['numbers'].intersection(lottery_numbers)) #sprawdzamy ilosc pasujacych numerow za pomocoa intesection
+    if numbers_matched > max_matched #
+        max_matched = numbers_matched
+        winner = player['name']
+winnings = 100 ** max_matched
+print(f"{winner} won {winnings}")
